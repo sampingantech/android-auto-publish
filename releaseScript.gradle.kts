@@ -11,9 +11,9 @@ val userFraction: String by project
 //}
 
 val autoPublishToPlayStore by tasks.registering {
-
-    val test = file("")
-    test.createNewFile()
+//
+//    val test = file("")
+//    test.createNewFile()
     doFirst {
         if (!project.hasProperty("channelTrack") ||
                 !project.hasProperty("userFraction")) {
