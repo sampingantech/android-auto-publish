@@ -3,8 +3,6 @@
  * PT. Sampingan Mitra Indonesia
  */
 
-package com.sampingan.auto_publisher;
-
 open class AutoReleaseTask : Exec() {
 
         @Option(option = "track",
