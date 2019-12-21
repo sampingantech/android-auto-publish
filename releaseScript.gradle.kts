@@ -1,7 +1,7 @@
-package com.sampingan.auto_publisher
+import kotlin.system.exitProcess
 
-//val channelTrack: String by project
-//val userFraction: String by project
+val channelTrack: String by project
+val userFraction: String by project
 
 //tasks.register<AutoReleaseTask>("auto") {
 //    group = "publishing"
@@ -12,10 +12,13 @@ package com.sampingan.auto_publisher
 
 val autoPublishToPlayStore by tasks.registering {
 
+    val test = file("")
+    test.createNewFile()
     doFirst {
         if (!project.hasProperty("channelTrack") ||
                 !project.hasProperty("userFraction")) {
             println()
+            exitProcess(1)
         }
     }
 }
